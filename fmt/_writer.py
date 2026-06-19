@@ -1,3 +1,22 @@
+# fmt — Module Python pour les fichiers .fmt
+# Copyright (C) 2026 bono-p
+#
+# Ce fichier fait partie du module fmt.
+#
+# Le module fmt est un logiciel libre ; vous pouvez le redistribuer
+# et/ou le modifier selon les termes de la GNU Lesser General Public
+# License telle que publiée par la Free Software Foundation, version 3
+# de la Licence, ou (à votre option) toute version ultérieure.
+#
+# Ce module est distribué dans l'espoir qu'il sera utile, mais SANS
+# AUCUNE GARANTIE. Voir la GNU LGPL pour plus de détails.
+#
+# Vous devez avoir reçu une copie de la GNU LGPL avec ce module.
+# Sinon : <https: //www.gnu.org/licenses/lgpl-3.0.html>
+  
+
+
+
 """
 fmt/_writer.py — Writer du format .fmt v2
 
