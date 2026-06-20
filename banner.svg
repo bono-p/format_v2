@@ -1,0 +1,108 @@
+<svg width="1200" height="420" viewBox="0 0 1200 420" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#11141C"/>
+      <stop offset="100%" stop-color="#0B0D13"/>
+    </linearGradient>
+    <linearGradient id="spine" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#E8B339"/>
+      <stop offset="100%" stop-color="#E8634A"/>
+    </linearGradient>
+    <radialGradient id="glow1" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#E8B339" stop-opacity="0.10"/>
+      <stop offset="100%" stop-color="#E8B339" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glow2" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#3FAE8C" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#3FAE8C" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="420" fill="url(#bgGrad)"/>
+
+  <!-- Ambient glows -->
+  <circle cx="850" cy="100" r="260" fill="url(#glow1)"/>
+  <circle cx="950" cy="350" r="220" fill="url(#glow2)"/>
+
+  <!-- Faint structural grid (very subtle, evokes a spec sheet) -->
+  <g stroke="#FFFFFF" stroke-opacity="0.025" stroke-width="1">
+    <line x1="0" y1="60" x2="1200" y2="60"/>
+    <line x1="0" y1="360" x2="1200" y2="360"/>
+    <line x1="60" y1="0" x2="60" y2="420"/>
+  </g>
+
+  <!-- ══════════════ LEFT COLUMN — wordmark as a .fmt entry ══════════════ -->
+  <g font-family="'JetBrains Mono','Fira Code','SF Mono',Consolas,Menlo,monospace">
+
+    <!-- Eyebrow -->
+    <text x="68" y="92" font-size="14" letter-spacing="4" fill="#6B7280" font-weight="600">FORMAT&#160;DE&#160;FICHIER&#160;STRUCTURÉ</text>
+
+    <!-- Wordmark : 'fmt' written exactly as a .fmt key would be quoted -->
+    <text x="64" y="205" font-size="108" font-weight="800">
+      <tspan fill="#E8B339">&#8217;</tspan><tspan fill="#F1EEE3">fmt</tspan><tspan fill="#E8B339">&#8217;</tspan>
+    </text>
+
+    <!-- Tagline rendered as the value of that same entry -->
+    <text x="68" y="252" font-size="21" fill="#9CA3AF">
+      <tspan fill="#6B7280">:&#160;</tspan><tspan fill="#E8B339">&#8220;</tspan><tspan fill="#D9D4C7">Sections&#160;imbriquées,</tspan>
+    </text>
+    <text x="68" y="280" font-size="21" fill="#D9D4C7">
+      <tspan>&#160;&#160;typées&#160;et&#160;lisibles.</tspan><tspan fill="#E8B339">&#8221;</tspan>
+    </text>
+
+    <!-- Badges -->
+    <g transform="translate(68,322)">
+      <rect x="0" y="0" width="98" height="34" rx="17" fill="#161A24" stroke="#262B3A"/>
+      <text x="49" y="22" font-size="13.5" fill="#9CA3AF" text-anchor="middle">v2.0.0</text>
+
+      <rect x="110" y="0" width="142" height="34" rx="17" fill="#161A24" stroke="#262B3A"/>
+      <text x="181" y="22" font-size="13.5" fill="#9CA3AF" text-anchor="middle">Python&#160;3.10+</text>
+
+      <rect x="264" y="0" width="98" height="34" rx="17" fill="#161A24" stroke="#262B3A"/>
+      <text x="313" y="22" font-size="13.5" fill="#9CA3AF" text-anchor="middle">LGPL&#160;v3</text>
+    </g>
+  </g>
+
+  <!-- ══════════════ RIGHT — tilted code card (the signature element) ══════════════ -->
+  <g transform="rotate(-2.2 790 215)">
+
+    <!-- flat shadow layer (no blur filter, for universal rendering) -->
+    <rect x="446" y="73" width="690" height="316" rx="16" fill="#05060A"/>
+
+    <!-- spine accent -->
+    <rect x="430" y="55" width="8" height="320" rx="4" fill="url(#spine)"/>
+
+    <!-- card -->
+    <rect x="438" y="55" width="690" height="320" rx="16" fill="#161A24" stroke="#262B3A" stroke-width="1.5"/>
+
+    <!-- dots (reuse the exact 3 accent colors used for syntax below) -->
+    <circle cx="468" cy="86" r="6" fill="#E8634A"/>
+    <circle cx="490" cy="86" r="6" fill="#E8B339"/>
+    <circle cx="512" cy="86" r="6" fill="#3FAE8C"/>
+
+    <!-- code -->
+    <g font-family="'JetBrains Mono','Fira Code','SF Mono',Consolas,Menlo,monospace" font-size="16">
+      <!-- "Config" : "Production" -->
+      <text x="468" y="135"><tspan fill="#E8B339">&#8220;Config&#8221;</tspan><tspan fill="#6B7280">&#160;:&#160;</tspan><tspan fill="#E8B339">&#8220;Production&#8221;</tspan></text>
+
+      <!-- section : "database" -->
+      <text x="468" y="178"><tspan fill="#E8634A">section</tspan><tspan fill="#6B7280">&#160;:&#160;</tspan><tspan fill="#E8B339">&#8220;database&#8221;</tspan></text>
+      <text x="468" y="201" fill="#6B7280">[</text>
+
+      <!-- 'port' : 5432 -->
+      <text x="492" y="224"><tspan fill="#D9D4C7">&#8217;port&#8217;</tspan><tspan fill="#6B7280">&#160;:&#160;</tspan><tspan fill="#3FAE8C">5432</tspan></text>
+
+      <!-- nested section : "pool" -->
+      <text x="492" y="267"><tspan fill="#E8634A">section</tspan><tspan fill="#6B7280">&#160;:&#160;</tspan><tspan fill="#E8B339">&#8220;pool&#8221;</tspan></text>
+      <text x="492" y="290" fill="#6B7280">[</text>
+
+      <!-- 'min' / 'max' -->
+      <text x="516" y="313"><tspan fill="#D9D4C7">&#8217;min&#8217;</tspan><tspan fill="#6B7280">&#160;:&#160;</tspan><tspan fill="#3FAE8C">2</tspan></text>
+      <text x="516" y="336"><tspan fill="#D9D4C7">&#8217;max&#8217;</tspan><tspan fill="#6B7280">&#160;:&#160;</tspan><tspan fill="#3FAE8C">10</tspan></text>
+
+      <text x="492" y="359" fill="#6B7280">]</text>
+    </g>
+  </g>
+
+</svg>
